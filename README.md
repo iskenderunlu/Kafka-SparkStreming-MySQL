@@ -3,9 +3,12 @@ Exactly-Once-Semantics
 
 We have some logs like the below:
 
+
+Kafka logs come into the topic, then streaming then mysql. 
 We aim to count "ERROR" logs by showing in the table, "error_log" .
 
 Have used java 1.8, pay attention for all version configaritions.
+
 
 1) Run Spark Server under the project root directory via the command, "sbin/start-all.sh" .
 
