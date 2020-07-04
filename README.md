@@ -24,3 +24,6 @@ Note: Your topic name will pass into exactlyonce.scala file code as topic parame
 4) Run the command, "sbt clean assembly".
 5) Run the command, "spark-submit --class ExactlyOnce --master local target/scala-2.11/kafka-sparkstreaming-mysql-assembly-0.1.0.jar"
 
+
+To see the results, have a look at the table, "error_log" by using "select * from error_log;".
+
