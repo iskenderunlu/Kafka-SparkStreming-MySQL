@@ -5,6 +5,8 @@ We have some logs like the below:
 
 We aim to count "ERROR" logs by showing in the table, "error_log" .
 
+Have used java 1.8, pay attention for all version configaritions.
+
 1) Run Spark Server under the project root directory via the command, "sbin/start-all.sh" .
 
 Note: For MACOS in case of port 22 refusing, go to system preference -> sharing -> remote repository ( and put tick).
