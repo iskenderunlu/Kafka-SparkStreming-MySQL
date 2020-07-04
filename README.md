@@ -19,20 +19,8 @@ Note: Your topic name will pass into exactlyonce.scala file code as topic parame
 
   * create database named as "pipeline" and run the command "use pipeline;".
   
-  * create table, error_log like the below:
+  * create tables, error_log and kafka_offset according the folder, "table format"(You can find the table structure in for the both txt files.) 
   
-      create table error_log (
-        log_time datetime primary key,
-        log_count int not null default 0
-      );
-  * create table, kafka_offset like the below:
-      create table kafka_offset (
-        topic int primary key,
-        `partition` int,
-        offset int
-      );
-  
-
 4) Run the command, "sbt clean assembly".
 5) Run the command, "spark-submit --class ExactlyOnce --master local target/scala-2.11/kafka-sparkstreaming-mysql-assembly-0.1.0.jar"
 
