@@ -3,10 +3,6 @@ Exactly-Once-Semantics
 
 We have some logs like the below:
 
-2017-07-30 14:09:08 ERROR some message
-2017-07-30 14:09:20 INFO  some message
-2017-07-30 14:10:50 ERROR some message
-
 We aim to count "ERROR" logs by showing in the table, "error_log" .
 
  log_time             log_count
