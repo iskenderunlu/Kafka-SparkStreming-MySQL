@@ -18,7 +18,7 @@ import scala.collection.immutable.HashSet
 object ExactlyOnce {
   def main(args: Array[String]): Unit = {
     val brokers = "localhost:9092"
-    val topic = "alog"
+    val topic = "topicname"
 
     val kafkaParams = Map[String, Object](
         "bootstrap.servers" -> brokers,
