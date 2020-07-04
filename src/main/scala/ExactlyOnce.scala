@@ -42,8 +42,6 @@ object ExactlyOnce {
       }.list.apply().toMap
     }
 
-    println(s"fromOffsets: $fromOffsets")
-
     val messages = KafkaUtils.createDirectStream[String, String](ssc,
         LocationStrategies.PreferConsistent,
       ConsumerStrategies.Subscribe[String, String](Array(topic), kafkaParams, fromOffsets)
