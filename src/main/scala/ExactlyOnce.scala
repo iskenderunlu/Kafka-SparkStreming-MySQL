@@ -28,7 +28,7 @@ object ExactlyOnce {
         "enable.auto.commit" -> (false: java.lang.Boolean),
         "auto.offset.reset" -> "earliest")
 
-    ConnectionPool.singleton("jdbc:mysql://localhost:3306/pipeline", "root", "password34!")
+    ConnectionPool.singleton("jdbc:mysql://localhost:3306/pipeline", "root", "yourpassword")
 
     val conf = new SparkConf().setAppName("ExactlyOnce").setIfMissing("spark.master", "local[2]")
     val ssc = new StreamingContext(conf, Seconds(5))
