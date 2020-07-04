@@ -47,14 +47,12 @@ object ExactlyOnce {
     val messages = KafkaUtils.createDirectStream[String, String](ssc,
         LocationStrategies.PreferConsistent,
       ConsumerStrategies.Subscribe[String, String](Array(topic), kafkaParams, fromOffsets)
-//        ConsumerStrategies.Assign[String, String](fromOffsets.keys, kafkaParams, fromOffsets)
     )
     messages.foreachRDD { rdd =>
       val offsetRanges = rdd.asInstanceOf[HasOffsetRanges].offsetRanges
       val result = processLogs(rdd).collect()
       DB.localTx { implicit session =>
         result.foreach { case (time, count) =>
-          println(s"time: $time count: $count")
           sql"""
           insert into error_log (log_time, log_count)
           value (${time}, ${count})
