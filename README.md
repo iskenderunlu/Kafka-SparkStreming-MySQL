@@ -23,6 +23,9 @@ Note: Your topic name will pass into exactlyonce.scala file code as topic parame
 3) Install MySQL 8.0.20 Server and MySQL Client
 
   * create database named as "pipeline" and run the command "use pipeline;".
+       * specify username and password
+       * ConnectionPool.singleton("jdbc:mysql://localhost:3306/pipeline", "root", "<yourpassword>")
+
   
   * create tables, error_log and kafka_offset according the folder, "table format"(You can find the table structure in for the both txt files.) 
   
