@@ -9,12 +9,11 @@ We have some logs like the below:
 
 We aim to count "ERROR" logs by showing in the table, "error_log" .
 
-+---------------------+-----------+
-| log_time            | log_count |
-+---------------------+-----------+
-| 2017-07-30 14:09:00 |         9 |
-| 2017-08-30 14:09:00 |         9 |
-+---------------------+-----------+
+ log_time             log_count
+
+ 2017-07-30 14:09:00          9 
+ 2017-08-30 14:09:00          9 
+
 
 
 1) Run Spark Server under the project root directory via the command, "sbin/start-all.sh" .
