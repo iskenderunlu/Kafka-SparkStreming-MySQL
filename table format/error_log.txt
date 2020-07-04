@@ -1,0 +1,4 @@
+create table error_log (
+  log_time datetime primary key,
+  log_count int not null default 0
+);

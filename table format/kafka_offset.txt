@@ -1,0 +1,4 @@
+create table kafka_offset( 
+	topic int primary key, 
+	`partition` int, 
+	offset int );
