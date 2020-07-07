@@ -1,7 +1,7 @@
 # Kafka-SparkStreming-MySQL
 Exactly-Once-Semantics
 
-We have some logs like the below:
+Intended to get advice from <http://shzhangji.com/>
 
 
 Kafka logs come into the topic, then streaming then mysql. 
